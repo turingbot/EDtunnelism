@@ -1,5 +1,3 @@
-// EDtunnel - A Cloudflare Worker-based VLESS Proxy with WebSocket Transport
-// @ts-ignore
 import { connect } from 'cloudflare:sockets';
 
 // ======================================
@@ -10,13 +8,13 @@ import { connect } from 'cloudflare:sockets';
  * User configuration and settings
  * Generate UUID: [Windows] Press "Win + R", input cmd and run: Powershell -NoExit -Command "[guid]::NewGuid()"
  */
-let userID = 'd342d11e-d424-4583-b36e-524ab1f0afa4';
+let userID = 'b8af1d4c-dabd-4256-a694-ed4911a09e66';
 
 /**
  * Array of proxy server addresses with ports
  * Format: ['hostname:port', 'hostname:port']
  */
-const proxyIPs = ['cdn.xn--b6gac.eu.org:443', 'cdn-all.xn--b6gac.eu.org:443'];
+const proxyIPs = ['18.193.131.26'];
 
 // Randomly select a proxy server from the pool
 let proxyIP = proxyIPs[Math.floor(Math.random() * proxyIPs.length)];
